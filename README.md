@@ -6,6 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
+- [Customizing css](#customiing-css)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
@@ -111,6 +112,12 @@ To update an existing project to a new version of `react-scripts`, [open the cha
 In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
+
+## customiing css
+npm run eject
+importLoaders: 1,
+modules:true,
+localIdentName:'[name]__[local]__[hash:base64:5]'
 
 ## Sending Feedback
 
