@@ -35,6 +35,18 @@ const reducer = (state = initialState, action) => {
                 },
             totalPrice:state.totalPrice-INGREDIENT_PRICES[action.ingredientName]
             });
+        case actionTypes.SET_INGREDIENT:
+        
+        return({
+            ...state,
+            ingredients:action.ingredient,
+            error:false
+        });
+        case actionTypes.FETCH_INGREDIENT_FAIL:
+        return({
+            ...state,
+            error:true
+        });
         default:
         console.log("inside defult",state);
         return state;
