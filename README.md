@@ -113,7 +113,7 @@ In most cases bumping the `react-scripts` version in `package.json` and running 
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
 
-## customiing css
+## customize css
 npm run eject
 importLoaders: 1,
 modules:true,
