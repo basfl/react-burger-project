@@ -14,24 +14,15 @@ import * as burgerBuilderActions from '../../store/actions/index'
 
 
 class BurgerBuilder extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {...}
-    // }
+   
     state = {
         purchasing: false, 
     }
 
     componentDidMount () {
-        console.log("initial state :",this.props);
+       
         this.props.onInitIngredient();
-        // axios.get( 'https://react-my-burger-e7c54.firebaseio.com//ingredients.json' )
-        //     .then( response => {
-        //         this.setState( { ingredients: response.data } );
-        //     } )
-        //     .catch( error => {
-        //         this.setState( { error: true } );
-        //     } );
+       
     }
 
     updatePurchaseState ( ingredients ) {
@@ -42,13 +33,9 @@ class BurgerBuilder extends Component {
             .reduce( ( sum, el ) => {
                 return sum + el;
             }, 0 );
-     //   this.setState( { purchasable: sum > 0 } );
+    
         return sum>0;
     }
-
-   
-
-    
 
     purchaseHandler = () => {
         if(this.props.isAuthenticated){
@@ -66,24 +53,13 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        // alert('You continue!');
-        
-        // const queryParams = [];
-        // for (let i in this.state.ingredients) {
-        //     queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
-        // }
-        // queryParams.push('price=' + this.state.totalPrice);
-        // const queryString = queryParams.join('&');
-        // this.props.history.push({
-        //     pathname: '/checkout',
-        //     search: '?' + queryString
-        // });
+       
         this.props.onInitPurchase();
         this.props.history.push('/checkout');
     }
 
     render () {
-        console.log("ings->",this.props.ings);
+       
         const disabledInfo = {
             ...this.props.ings
         };
@@ -113,10 +89,7 @@ class BurgerBuilder extends Component {
                 purchaseCancelled={this.purchaseCancelHandler}
                 purchaseContinued={this.purchaseContinueHandler} />;
         }
-        // if ( this.state.loading ) {
-        //     orderSummary = <Spinner />;
-        // }
-        // {salad: true, meat: false, ...}
+       
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>

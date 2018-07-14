@@ -8,28 +8,12 @@ import {connect} from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner'
 
 class Orders extends Component {
-    // state = {
-    //     orders: [],
-    //     loading: true
-    // }
+    
 
     componentDidMount() {
-        console.log("here iam ",this.props.token);
+        
         this.props.onFetchOrders(this.props.token,this.props.userId);
-        // axios.get('/orders.json')
-        //     .then(res => {
-        //         const fetchedOrders = [];
-        //         for (let key in res.data) {
-        //             fetchedOrders.push({
-        //                 ...res.data[key],
-        //                 id: key
-        //             });
-        //         }
-        //         this.setState({loading: false, orders: fetchedOrders});
-        //     })
-        //     .catch(err => {
-        //         this.setState({loading: false});
-        //     });
+       
     }
 
     render () {
