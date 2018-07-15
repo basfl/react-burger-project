@@ -112,6 +112,13 @@ To update an existing project to a new version of `react-scripts`, [open the cha
 In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
+## Packages for testing
+
+npm install --save enzyme react-test-renderer enzyme
+-adapter-react-16
+## Runing Test
+
+npm test
 
 ## customize css
 npm run eject
